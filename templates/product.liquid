@@ -11,8 +11,6 @@
 
 {{ product.price | money }}
 
-
-
 {{ product.metafields.custom.puissance.type }}
 {{ product.metafields.custom.puissance.value }}
 
@@ -35,7 +33,7 @@
 {% render 'add-to-cart-form' %}
 
 <script>
-  new Swiper(".swiper-container-         {{- product.id -}}", {
+  new Swiper(".swiper-container-            {{- product.id -}}", {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 0,
@@ -46,8 +44,8 @@
         allowTouchMove: false,
         speed: 0,
         navigation: {
-          nextEl: ".swiper-button-next-         {{- product.id -}}",
-          prevEl: ".swiper-button-prev-         {{- product.id -}}"
+          nextEl: ".swiper-button-next-            {{- product.id -}}",
+          prevEl: ".swiper-button-prev-            {{- product.id -}}"
         }
       }
     }
