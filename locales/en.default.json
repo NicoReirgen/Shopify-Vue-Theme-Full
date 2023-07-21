@@ -7,5 +7,12 @@
     "accueil": {
       "title": "Accueil"
     }
+  },
+  "shopify": {
+    "sentence": {
+      "words_connector": ",",
+      "two_words_connector": " et",
+      "last_word_connector": "et"
+    }
   }
 }
