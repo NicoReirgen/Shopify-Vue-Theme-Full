@@ -21,8 +21,25 @@
 
 
 
-      Type: {{ product.metafields.information.directions.type }}
-      Value: {{ product.metafields.information.directions.value }}
+      {{ product.metafields.custom.puissance.type }}
+      {{ product.metafields.custom.puissance.value }}
+
+      {{ product.metafields.custom.confort.type }}
+      {{ product.metafields.custom.confort.value }}
+
+      {{ product.metafields.custom.spin.type }}
+      {{ product.metafields.custom.spin.value }}
+
+      {{ product.metafields.custom.controle.type }}
+      {{ product.metafields.custom.controle.value }}
+
+      {{ product.metafields.custom.tolerance.type }}
+      {{ product.metafields.custom.tolerance.value }}
+
+      {{ product.metafields.custom.maniabilite.type }}
+      {{ product.metafields.custom.maniabilite.value }}
+
+
     </div>
 
     <div class="product-bottom">
@@ -35,7 +52,7 @@
 </div>
 
 <script>
-  new Swiper(".swiper-container-      {{- product.id -}}", {
+  new Swiper(".swiper-container-        {{- product.id -}}", {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 0,
@@ -46,8 +63,8 @@
         allowTouchMove: false,
         speed: 0,
         navigation: {
-          nextEl: ".swiper-button-next-      {{- product.id -}}",
-          prevEl: ".swiper-button-prev-      {{- product.id -}}"
+          nextEl: ".swiper-button-next-        {{- product.id -}}",
+          prevEl: ".swiper-button-prev-        {{- product.id -}}"
         }
       }
     }
