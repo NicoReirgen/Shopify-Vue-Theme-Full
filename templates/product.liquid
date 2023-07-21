@@ -1,58 +1,41 @@
-<div class="product-template container">
-  <div class="product-images">
-    <div class="swiper-container-product-page swiper-container-{{- product.id -}}">
-      <div class="swiper-wrapper">
-        {% for image in product.images %}
-          <div class="swiper-slide">
-            <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" />
-            <div class="swiper-button-next swiper-button-next-{{- product.id -}}"></div>
-            <div class="swiper-button-prev swiper-button-prev-{{- product.id -}}"></div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
+{{- product.id -}}
+{% for image in product.images %}
+  <div class="swiper-slide">
+    <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}" />
+    <div class="swiper-button-next swiper-button-next-{{- product.id -}}"></div>
+    <div class="swiper-button-prev swiper-button-prev-{{- product.id -}}"></div>
   </div>
+{% endfor %}
 
-  <div class="product-description-container">
-    <div class="product-title">
-      <h1>{{ product.title }}</h1>
+<h1>{{ product.title }}</h1>
 
-      {{ product.price | money }}
-
+{{ product.price | money }}
 
 
-      {{ product.metafields.custom.puissance.type }}
-      {{ product.metafields.custom.puissance.value }}
 
-      {{ product.metafields.custom.confort.type }}
-      {{ product.metafields.custom.confort.value }}
+{{ product.metafields.custom.puissance.type }}
+{{ product.metafields.custom.puissance.value }}
 
-      {{ product.metafields.custom.spin.type }}
-      {{ product.metafields.custom.spin.value }}
+{{ product.metafields.custom.confort.type }}
+{{ product.metafields.custom.confort.value }}
 
-      {{ product.metafields.custom.controle.type }}
-      {{ product.metafields.custom.controle.value }}
+{{ product.metafields.custom.spin.type }}
+{{ product.metafields.custom.spin.value }}
 
-      {{ product.metafields.custom.tolerance.type }}
-      {{ product.metafields.custom.tolerance.value }}
+{{ product.metafields.custom.controle.type }}
+{{ product.metafields.custom.controle.value }}
 
-      {{ product.metafields.custom.maniabilite.type }}
-      {{ product.metafields.custom.maniabilite.value }}
+{{ product.metafields.custom.tolerance.type }}
+{{ product.metafields.custom.tolerance.value }}
 
+{{ product.metafields.custom.maniabilite.type }}
+{{ product.metafields.custom.maniabilite.value }}
 
-    </div>
-
-    <div class="product-bottom">
-      <div class="product-description">
-        {{ product.description }}
-      </div>
-      {% render 'add-to-cart-form' %}
-    </div>
-  </div>
-</div>
+{{ product.description }}
+{% render 'add-to-cart-form' %}
 
 <script>
-  new Swiper(".swiper-container-        {{- product.id -}}", {
+  new Swiper(".swiper-container-         {{- product.id -}}", {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 0,
@@ -63,8 +46,8 @@
         allowTouchMove: false,
         speed: 0,
         navigation: {
-          nextEl: ".swiper-button-next-        {{- product.id -}}",
-          prevEl: ".swiper-button-prev-        {{- product.id -}}"
+          nextEl: ".swiper-button-next-         {{- product.id -}}",
+          prevEl: ".swiper-button-prev-         {{- product.id -}}"
         }
       }
     }
